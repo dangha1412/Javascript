@@ -1,0 +1,32 @@
+function rot13(str) {
+ let arr = []
+ let minDecode = 77
+ let minEncode = 90
+ for (let i = 0; i < str.length; i++) {
+  arr.push(str.charCodeAt(i))
+}
+ let newArr = arr.map(number => {
+   if (number >= 78) {return number -13}
+   else if (number === 77) {return number = 90}
+   else if (number === 76) {return number = 89}
+   else if (number === 75) {return number = 88}
+   else if (number === 74) {return number = 87}
+   else if (number === 73) {return number = 86}
+   else if (number === 72) {return number = 85}
+   else if (number === 71) {return number = 84}
+   else if (number === 70) {return number = 83}
+   else if (number === 69) {return number = 82}
+   else if (number === 68) {return number = 81}
+   else if (number === 67) {return number = 80}
+   else if (number === 66) {return number = 79}
+   else if (number === 65) {return number = 78}
+   else if (number < 65 || number >90) {return number}
+ })
+ let newArrEncode = []
+ for (let k = 0; k< newArr.length; k++) {
+   newArrEncode.push(String.fromCharCode(newArr[k]))
+ }
+ return newArrEncode.join("")
+}
+
+console.log(rot13("SERR CVMMN!"));

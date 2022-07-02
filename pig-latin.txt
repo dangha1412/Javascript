@@ -1,0 +1,20 @@
+function translatePigLatin(str) {
+  let result = ""
+  let index = str.match(/[aeiou]/)
+   if (index === null) {
+     result = str+"ay"
+   } else if (index["index"]>0) {
+     
+      let removed = str.slice(index["index"])
+      result = removed+str.slice(0,index["index"])+"ay"
+
+   } else if (index["index"]===0) {
+      result = str+"way"}
+  return result
+}
+
+
+  
+
+console.log(translatePigLatin("rhythm"));
+

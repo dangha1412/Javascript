@@ -1,0 +1,13 @@
+function dropElements(arr, func) {
+  let result =[]
+  let sliceIndex = arr.findIndex(func)
+  if(sliceIndex >= 0) {
+    return result = arr.slice(sliceIndex);
+  } else {
+    result = []
+  }
+  return result
+}
+
+let a= dropElements([1, 2, 3, 4], function(n) {return n > 5;});
+console.log(a)

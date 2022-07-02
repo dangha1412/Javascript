@@ -1,0 +1,12 @@
+function addTogether() {
+  const [first,second] = arguments
+  if (typeof first !== "number") {
+    return undefined 
+  } else if (typeof first === "number" && typeof second === "number") {
+    return first + second
+  } else if (second === undefined) {
+    return (second) => addTogether(first, second);
+  }
+}
+
+console.log(addTogether(5)(7));

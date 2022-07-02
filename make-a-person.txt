@@ -1,0 +1,32 @@
+const Person = function(firstAndLast) {
+  // Only change code below this line
+  // Complete the method below and implement the others similarly
+  let fullName = firstAndLast
+  this.getFullName = function() {
+    return fullName;
+  };
+  this.getLastName = function() {
+    return fullName.split(" ")
+                   .slice(1)
+                   .join()
+  }
+  this.getFirstName = function() {
+    return fullName.split(" ")
+                   .slice(0,1)
+                   .join()
+  }
+  this.setFullName = function(name) {
+    fullName = (name)
+  }
+  this.setLastName = function(name) {
+    fullName =fullName.split(" ").slice(0,1).join() + " " + name
+  }
+  this.setFirstName = function(name) {
+    fullName = name + " " + fullName.split(" ").slice(1).join()
+  }
+};
+
+const bob = new Person('Bob Ross');
+
+bob.setFirstName("Haskell")
+console.log(bob.getFullName())

@@ -1,0 +1,20 @@
+function sumPrimes(num) {
+  let arr = []
+  for (let i = 0; i <= num; i++) {
+    arr.push(i)
+  }
+  let newArr = arr.filter((number) => {
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+});
+ return newArr.reduce((accumulator, value) => {
+  return accumulator + value 
+}, 0) -1;
+
+            
+  //.reduce((partialSum, a) => partialSum + a, 0);;
+}
+
+console.log(sumPrimes(10));

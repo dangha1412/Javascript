@@ -1,0 +1,11 @@
+function confirmEnding(str, target) {
+  let endStr = str.split("")
+                  .splice(str.length-target.length,target.length)
+                  //.splice()
+                  .join("")
+                  
+                  
+ return endStr===target;
+}
+
+console.log(confirmEnding("Abstraction", "action"));

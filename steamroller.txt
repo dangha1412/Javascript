@@ -1,0 +1,19 @@
+function steamrollArray(arr) {
+let result = arr.toString()
+                .replace(",,",",")
+                .split(",")
+                .map(function(v){
+                  if(v==="[object Object]") {
+                    return {}
+                  } else 
+                  if (isNaN(v)) {
+                    return v 
+                  } else {
+                    return parseInt(v)
+                  }
+                })
+return result
+            
+  }
+
+console.log(steamrollArray([1, [], [3, [[4]]]]));

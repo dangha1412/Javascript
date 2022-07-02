@@ -1,0 +1,19 @@
+function truthCheck(collection, pre) {
+  let checkArr=[]
+  let count = 0
+for (let i = 0; i < collection.length; i++) {
+  checkArr.push(!!collection[i][pre])
+}
+for (let k = 0; k < checkArr.length; k++) {
+  if (checkArr[k]===true) {
+  count++
+  }
+}
+if (count === checkArr.length) {
+  return true } {
+    return false
+  }
+}
+
+
+console.log(truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "role"));

@@ -1,0 +1,16 @@
+function smallestCommons(arr) {
+  let newArr = [];
+  let min = Math.min(...arr)
+  let max = Math.max(...arr)
+  for (let i = min; i <= max; i++) {
+    newArr.push(i)
+  }
+  const prod = newArr.reduce((acc,ar) => acc*=ar,min);
+for (let i = 1; i <= prod; i++) {
+  let len = newArr.filter(number => i % number === 0).length;
+  if (len === newArr.length) {
+    return i
+}
+}
+}
+console.log(smallestCommons([1,5]));
