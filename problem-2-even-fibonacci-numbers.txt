@@ -1,0 +1,11 @@
+function fiboEvenSum(n) {
+let fiboArr = [1,2]
+for (let i = 0; i<n ; i++){
+  fiboArr.push(fiboArr[fiboArr.length-2]+fiboArr[fiboArr.length-1])}
+let resultFiboArr = fiboArr.filter(number => number<=n && number%2===0)
+return resultFiboArr.reduce((total,currentValue) => {
+  return total + currentValue
+})
+}
+console.log(fiboEvenSum(60))
+
